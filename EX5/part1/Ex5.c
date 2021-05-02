@@ -10,7 +10,7 @@ void init_LCD(void);
 void LCD_write(unsigned char data); 
 void main(void)
 {
-unsigned char i,nima[11]="nima";// عبارتی که میخواهیم روی ال سی دی نمایش داده شود
+unsigned char i,HeidariNejad[11]="HeidariNejad";// عبارتی که میخواهیم روی ال سی دی نمایش داده شود
 DDRB=0xFF;
 DDRD=0x07;                 
 init_LCD();                      // راه اندازی اولیه ی ال سی دی 
@@ -21,7 +21,7 @@ LCD_cmd(0x14);
 LCD_cmd(0x14);
 for(i=0;i<10;i++)                 // دادن کاراکترهای عبارت مورد نظر به ال سی دی جهت نمایش
 {
-    LCD_write(nima[i]);   
+    LCD_write(HeidariNejad[i]);   
     delay_ms(10);
 }
 }
